@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <img src="{% static 'images/abanner.jpeg ' %}" height="450px" width="100%">
+</div>
+
+<div class="container-fluid mt-3" style="margin-bottom:100px;">
+    <h3 class="text-center fw-bold">Our Collections</h3>
+    <p style="text-align:justify;line-height:2;">Related keylists. Amazon.com Inc (Amazon) is an online retailer and web service provider. The company provides products such as apparel, auto and industrial items, beauty and health products, electronics, grocery, games, jewelry, kids and baby products, music, sports goods, toys, and tools.</p>
+</div>
+
+
+<div class="container-fluid" style="margin-bottom:100px;">
+    <div class="row">
+        {% for i in c %}
+        <div class="col-sm-4">
+            <div class="card" style="width: 25rem;">
+  <img src="{{i.image.url}}" height="200px",width="100%" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title text-center fw-bold">{{i.name}}</h5>
+
+    <a href="{% url 'shop:allprod' i.name %}" class="btn btn-primary" style="position:relative;left:39%;">Products</a>
+  </div>
+</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+{% endblock %}

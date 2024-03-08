@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div>
+
+<h4 class="text-center text-success"><b>{{msg}}</b></h4>
+<h4 class="text-center text-danger"><b>THANK YOU FOR YOUR ORDER....</b></h4>
+<h4 class="text-center"><a href="{% url 'shop:allcat' %}">Continue shopping</a></h4>
+
+</div>
+
+{% endblock %}
+
+
+
+
+

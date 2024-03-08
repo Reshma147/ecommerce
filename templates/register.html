@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<center>
+    <div class="container" style="margin-bottom:100px">
+<h3> REGISTER</h3>
+<form method="POST" >
+     {% csrf_token %}
+<div class="mb-2">
+  <label class="form-label">USERNAME</label>
+  <input type="text" class="form-control" name="u" placeholder="ENTER THE NAME">
+</div>
+
+    <div class="mb-2">
+  <label class="form-label">PASSWORD</label>
+  <input type="password" class="form-control"  name="p" placeholder="ENTER THE PASSWORD">
+</div>
+
+
+    <div class="mb-3">
+  <label class="form-label">CONFIRM PASSWORD</label>
+  <input type="password" class="form-control"  name="cp" placeholder="CONFIRM PASSWORD">
+</div>
+<div class="mb-3">
+  <label class="form-label">FIRST NAME</label>
+  <input type="text" class="form-control"  name="f" placeholder="ENTER THE FIRST NAME">
+</div>
+
+    <div class="mb-3">
+  <label class="form-label">LAST NAME</label>
+  <input type="text" class="form-control"  name="l" placeholder="ENTER THE LAST NAME">
+</div>
+
+
+
+   <div class="mb-3">
+  <label class="form-label">EMAIL</label>
+  <input type="text" class="form-control"  name="e" placeholder="ENTER THE EMAIL">
+</div>
+
+<div class="mb-3">
+  <label class="form-label">PLACE</label>
+  <input type="text" class="form-control"  name="pl" placeholder="ENTER THE PLACE">
+</div>
+
+<div class="mb-3">
+  <label class="form-label">PHONE</label>
+  <input type="text" class="form-control"  name="n" placeholder="ENTER THE PHONE">
+</div>
+<div class="mb-3">
+    <input type="submit" class="form-control btn btn-secondary">
+</div>
+
+</form></div>
+</center>
+
+{% endblock %}
